@@ -9,9 +9,24 @@ Transform your ESP8266 into an Apple HomeKit-compatible smart lamp with Siri voi
 ![Version](https://img.shields.io/badge/Version-2.0-brightgreen)
 ![Production Ready](https://img.shields.io/badge/Production-Ready-success)
 
-## 🎯 Two Versions Available
+## 🎯 Three Versions Available
 
-### 🌟 **Production Version v2.0** (Recommended)
+### 🌈 **RGB LED Strip Version v2.1** (NEW! For LED Strips)
+**File**: `ESP8266_HomeKit_RGB_Strip.ino`
+
+**Perfect for WS2812B/NeoPixel LED strips!**
+- ✅ Full RGB Color Control (16.7M colors)
+- ✅ Hue, Saturation, Brightness via HomeKit
+- ✅ 8 Color Scene Presets
+- ✅ 3 Dynamic Effects (Rainbow, Fire, Breathing)
+- ✅ Voice: "Hey Siri, set lamp to purple"
+- ✅ All Production v2.0 features included
+- ✅ Web color picker
+- ✅ Works with any LED strip length
+
+**📖 [Read RGB Strip Setup Guide →](RGB_STRIP_GUIDE.md)**
+
+### 🌟 **Production Version v2.0** (For Single Lamp/Relay)
 **File**: `ESP8266_HomeKit_Production.ino`
 
 Full-featured, production-ready version with:
@@ -27,7 +42,7 @@ Full-featured, production-ready version with:
 
 **📖 [Read Production Setup Guide →](PRODUCTION_GUIDE.md)**
 
-### 📦 **Basic Version v1.0**
+### 📦 **Basic Version v1.0** (Simplest)
 **File**: `ESP8266_HomeKit_Alternative.ino`
 
 Simple, straightforward version - perfect for beginners:
@@ -58,16 +73,18 @@ Say "Hey Siri, turn on the lamp" and watch it work! ✨
 
 ## 🤔 Which Version Should I Use?
 
-| Choose **Production v2.0** if you want: | Choose **Basic v1.0** if you want: |
-|----------------------------------------|-----------------------------------|
-| ✅ Wireless firmware updates (OTA) | ✅ Simplest possible setup |
-| ✅ Easy WiFi setup (no coding) | ✅ Learning-friendly code |
-| ✅ Physical button control | ✅ Minimal features |
-| ✅ Settings that survive power loss | ✅ Quick prototype |
-| ✅ Professional features | ✅ Hardcoded WiFi is OK |
-| ✅ Production deployment | ✅ Basic functionality only |
+| Choose **RGB Strip v2.1** if: | Choose **Production v2.0** if: | Choose **Basic v1.0** if: |
+|------------------------------|--------------------------------|---------------------------|
+| ✅ You have WS2812B LED strip | ✅ Single lamp or relay control | ✅ Simplest setup |
+| ✅ Want full color control | ✅ No RGB needed | ✅ Learning first |
+| ✅ Need effects & scenes | ✅ Professional features | ✅ Basic features only |
+| ✅ "Siri, set lamp to purple" | ✅ Production deployment | ✅ Quick prototype |
+| ✅ 16.7M colors | ✅ Button + scenes | ✅ Minimal code |
 
-**Recommendation**: Start with **Production v2.0** for best experience!
+**Recommendations:**
+- **Have LED strip?** → Use **RGB Strip v2.1** 🌈
+- **Single lamp/relay?** → Use **Production v2.0** 🌟
+- **Just learning?** → Use **Basic v1.0** 📦
 
 ## 📋 Requirements
 
@@ -93,7 +110,21 @@ Say "Hey Siri, turn on the lamp" and watch it work! ✨
 
 ## 🚀 Quick Start
 
-### For Production v2.0 (Recommended)
+### For RGB Strip v2.1 (LED Strips) 🌈
+**📖 See detailed guide:** [RGB_STRIP_GUIDE.md](RGB_STRIP_GUIDE.md)
+
+**Quick steps:**
+1. Install Arduino IDE + ESP8266 board support
+2. Install libraries: HomeKit-ESP8266, WiFiManager, ArduinoJson, **FastLED**
+3. Wire: LED Strip Data → GPIO2, 5V & GND → External power supply
+4. Open `ESP8266_HomeKit_RGB_Strip.ino`
+5. Set `NUM_LEDS` to your LED count (line 43)
+6. Upload to ESP8266
+7. Connect to "ESP8266-RGB-Setup" WiFi and configure
+8. Add to Apple Home app with code: **111-22-333**
+9. Say: "Hey Siri, set lamp to purple" 🎨
+
+### For Production v2.0 (Single Lamp) 🌟
 **📖 See detailed guide:** [PRODUCTION_GUIDE.md](PRODUCTION_GUIDE.md)
 
 **Quick steps:**
@@ -104,7 +135,7 @@ Say "Hey Siri, turn on the lamp" and watch it work! ✨
 5. Connect to "ESP8266-Setup" WiFi and configure
 6. Add to Apple Home app with code: **111-22-333**
 
-### For Basic v1.0
+### For Basic v1.0 (Simplest) 📦
 
 ### 1. Install Arduino IDE & ESP8266 Support
 
