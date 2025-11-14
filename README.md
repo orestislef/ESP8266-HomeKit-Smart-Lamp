@@ -6,8 +6,42 @@ Transform your ESP8266 into an Apple HomeKit-compatible smart lamp with Siri voi
 ![Apple HomeKit](https://img.shields.io/badge/Apple-HomeKit-black)
 ![Arduino](https://img.shields.io/badge/Arduino-Compatible-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
+![Version](https://img.shields.io/badge/Version-2.0-brightgreen)
+![Production Ready](https://img.shields.io/badge/Production-Ready-success)
 
-## ✨ Features
+## 🎯 Two Versions Available
+
+### 🌟 **Production Version v2.0** (Recommended)
+**File**: `ESP8266_HomeKit_Production.ino`
+
+Full-featured, production-ready version with:
+- ✅ OTA Updates (wireless firmware upload)
+- ✅ WiFi Manager (easy setup, no hardcoded passwords)
+- ✅ Persistent Storage (remembers state after power loss)
+- ✅ Physical Button (toggle, scenes, factory reset)
+- ✅ 5 Scene Presets (Bright, Reading, Relax, Night, Custom)
+- ✅ Smooth Fading transitions
+- ✅ Watchdog protection
+- ✅ Factory reset capability
+- ✅ Enhanced web UI
+
+**📖 [Read Production Setup Guide →](PRODUCTION_GUIDE.md)**
+
+### 📦 **Basic Version v1.0**
+**File**: `ESP8266_HomeKit_Alternative.ino`
+
+Simple, straightforward version - perfect for beginners:
+- ✅ Apple HomeKit integration
+- ✅ Siri voice control
+- ✅ Web interface
+- ✅ Brightness control
+- ✅ Easy to understand code
+
+**Great for**: Learning, simple projects, minimal features needed
+
+---
+
+## ✨ Core Features (Both Versions)
 
 - 🍎 **Apple HomeKit Integration** - Add to Home app and control with Siri
 - 🗣️ **Voice Control** - "Hey Siri, turn on the lamp"
@@ -22,24 +56,55 @@ Transform your ESP8266 into an Apple HomeKit-compatible smart lamp with Siri voi
 
 Say "Hey Siri, turn on the lamp" and watch it work! ✨
 
+## 🤔 Which Version Should I Use?
+
+| Choose **Production v2.0** if you want: | Choose **Basic v1.0** if you want: |
+|----------------------------------------|-----------------------------------|
+| ✅ Wireless firmware updates (OTA) | ✅ Simplest possible setup |
+| ✅ Easy WiFi setup (no coding) | ✅ Learning-friendly code |
+| ✅ Physical button control | ✅ Minimal features |
+| ✅ Settings that survive power loss | ✅ Quick prototype |
+| ✅ Professional features | ✅ Hardcoded WiFi is OK |
+| ✅ Production deployment | ✅ Basic functionality only |
+
+**Recommendation**: Start with **Production v2.0** for best experience!
+
 ## 📋 Requirements
 
 ### Hardware
-- ESP8266 board (ESP8266MOD, NodeMCU, Wemos D1 Mini, etc.)
-- USB cable for programming
-- LED or relay module (optional - has built-in LED for testing)
-- 220Ω resistor (if using external LED)
+- **ESP8266 board** (ESP8266MOD, NodeMCU, Wemos D1 Mini, etc.)
+- **USB cable** for initial programming
+- **LED or relay module** (optional - has built-in LED for testing)
+- **Physical button** (recommended for Production v2.0)
+- **220Ω resistor** (if using external LED)
 
 ### Software
-- [Arduino IDE](https://www.arduino.cc/en/software) (1.8.19 or newer)
-- ESP8266 board support
-- HomeKit-ESP8266 library
+- **[Arduino IDE](https://www.arduino.cc/en/software)** (1.8.19 or newer)
+- **ESP8266 board support**
+- **HomeKit-ESP8266** library by Mixiaoxiao
+
+**Production v2.0 also needs:**
+- **WiFiManager** library by tzapu
+- **ArduinoJson** library by Benoit Blanchon
 
 ### Other
-- 2.4GHz WiFi network (ESP8266 doesn't support 5GHz)
-- iPhone/iPad with Home app (iOS 10 or newer)
+- **2.4GHz WiFi network** (ESP8266 doesn't support 5GHz)
+- **iPhone/iPad** with Home app (iOS 10 or newer)
 
 ## 🚀 Quick Start
+
+### For Production v2.0 (Recommended)
+**📖 See detailed guide:** [PRODUCTION_GUIDE.md](PRODUCTION_GUIDE.md)
+
+**Quick steps:**
+1. Install Arduino IDE + ESP8266 board support
+2. Install libraries: HomeKit-ESP8266, WiFiManager, ArduinoJson
+3. Open `ESP8266_HomeKit_Production.ino`
+4. Upload to ESP8266
+5. Connect to "ESP8266-Setup" WiFi and configure
+6. Add to Apple Home app with code: **111-22-333**
+
+### For Basic v1.0
 
 ### 1. Install Arduino IDE & ESP8266 Support
 
