@@ -1,0 +1,20 @@
+# Arduino build files
+*.hex
+*.elf
+*.bin
+*.map
+
+# IDE files
+.vscode/
+.idea/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# WiFi credentials (if using separate file)
+wifi_info.h
+secrets.h
+credentials.h
